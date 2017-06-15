@@ -1,34 +1,36 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class MealBuilder {
 
-    private Meal ongoingMealBuilding;
+    private List<Item> itemList;
 
     public MealBuilder(){
-        ongoingMealBuilding = new Meal();
-    }
-
-    public Meal prepare(){
-        return ongoingMealBuilding;
+        itemList = new ArrayList<>();
     }
 
     public MealBuilder withChickenBurger(){
-        ongoingMealBuilding.addItemToList(new ChickenBurger());
+        itemList.add(new ChickenBurger());
         return this;
     }
 
     public MealBuilder withBeefBurger(){
-        ongoingMealBuilding.addItemToList(new BeefBurger());
+        itemList.add(new BeefBurger());
         return this;
     }
 
     public MealBuilder withCoke(){
-        ongoingMealBuilding.addItemToList(new Coke());
+        itemList.add(new Coke());
         return this;
     }
 
     public MealBuilder withPepsi(){
-        ongoingMealBuilding.addItemToList(new Pepsi());
+        itemList.add(new Pepsi());
         return this;
     }
 
+    public Meal prepare(){
+        return new Meal(itemList);
+    }
 
 }

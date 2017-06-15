@@ -2,7 +2,7 @@ public class Run {
 
     public static void main(String[] args) {
 
-        Meal meal1 = new MealBuilder()
+        Meal meal1 = Meal.buildMeal()
                 .withBeefBurger()
                 .withChickenBurger()
                 .withCoke()

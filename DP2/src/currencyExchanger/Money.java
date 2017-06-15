@@ -1,3 +1,5 @@
+package currencyExchanger;
+
 import java.math.BigDecimal;
 
 public class Money {

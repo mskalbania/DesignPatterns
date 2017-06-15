@@ -9,6 +9,14 @@ public class Meal {
         itemList = new ArrayList<>();
     }
 
+    public Meal(List<Item> items){
+        itemList = items;
+    }
+
+    public static MealBuilder buildMeal(){
+        return new MealBuilder();
+    }
+
     public void addItemToList(Item item) {
         itemList.add(item);
     }
